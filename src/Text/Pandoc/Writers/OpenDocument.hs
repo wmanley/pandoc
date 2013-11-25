@@ -389,7 +389,7 @@ inlineToOpenDocument o ils
                                            , ("xlink:href" , s       )
                                            , ("office:name", t       )
                                            ] . inSpanTags "Definition"
-      mkImg  s t   = inTags False "draw:frame" (attrsFromTitle t) $
+      mkImg  s t   = inTags False "draw:frame" (("draw:name", s):attrsFromTitle t) $
                      selfClosingTag "draw:image" [ ("xlink:href"   , s       )
                                                  , ("xlink:type"   , "simple")
                                                  , ("xlink:show"   , "embed" )
